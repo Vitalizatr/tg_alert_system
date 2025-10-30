@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), 'token.env')
 if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path)
+else:
+    print(" Файл token.env не найден!")
 
 #логика бота
 import asyncio 
@@ -41,4 +43,5 @@ async def main():
   await dp.start_polling(bot) 
  
 if __name__ == "__main__": 
+
   asyncio.run(main())
