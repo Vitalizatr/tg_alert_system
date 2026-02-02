@@ -15,43 +15,40 @@ Easy setup with environment variables.
 
 Clone the repository:
 
-git clone <repo_url>
-cd tg_alert_system
+```git clone <repo_url>
+```cd tg_alert_system
 
 
 Install dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt
 
 
 # Create a token.env file in the project root:
 
-BOT_TOKEN=your_telegram_bot_token
+```BOT_TOKEN=your_telegram_bot_token
 
 Usage
 
 Run the bot:
 
-<code>python main.py</code>
+```python main.py
 
 
 Users send /start to the bot to subscribe for alerts.
 
 From your project, call:
 
-from tg_alert_system import alert
+``` from tg_alert_system import alert
 
-await alert("MyProject", "An error occurred: ...")
-
+``` await alert("MyProject", "An error occurred: ...")
 
 All subscribed users will receive the message in Telegram.
 
 # Dependencies
 
 Python 3.10+
-
 aiogram
-
 python-dotenv
 
 # License
